@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Singleplayer Shooter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="ui-container">
+        <div id="join-screen">
+            <h1>Shooter Game</h1>
+            <p style="margin-bottom: 10px; color: #aaa;">Select Bot Difficulty</p>
+            <select id="bot-difficulty">
+                <option value="easy">Easy</option>
+                <option value="medium" selected>Medium</option>
+                <option value="hard">Hard</option>
+            </select>
+            <button id="join-btn">Start Game</button>
+        </div>
+        <div id="game-ui" style="display: none;">
+            <div id="hud">
+                <div class="hud-item">HP: <span id="hp-display">100</span></div>
+                <div class="hud-item">Weapon: <span id="weapon-display">Assault</span></div>
+                <div class="hud-item">Time: <span id="time-display">30:00</span></div>
+            </div>
+            <div id="death-screen" style="display: none;">
+                <h2>YOU DIED</h2>
+                <p>Respawning in 3 seconds...</p>
+            </div>
+        </div>
+    </div>
+    <canvas id="game-canvas"></canvas>
+
+    <script src="game.js"></script>
+</body>
+</html>
